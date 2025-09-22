@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.woofofwalkstreet.com/</loc>
+    <image:image>
+      <image:loc>https://www.woofofwalkstreet.com/images/logo/woof-logo.png</image:loc>
+      <image:caption>The Woof of Walk Street logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.woofofwalkstreet.com/images/hero/melbourne-skyline.jpg</image:loc>
+      <image:caption>Melbourne city skyline with Yarra River</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Walking Services -->
+  <url>
+    <loc>https://www.woofofwalkstreet.com/walking-services.html</loc>
+    <image:image>
+      <image:loc>https://www.woofofwalkstreet.com/images/walks/dog-beach.jpg</image:loc>
+      <image:caption>Happy dog enjoying the beach during a walk</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.woofofwalkstreet.com/images/walks/dogs-playing.jpg</image:loc>
+      <image:caption>Dogs playing together on the grass during walk time</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.woofofwalkstreet.com/images/walks/dog-park.jpg</image:loc>
+      <image:caption>Relaxing after a walk in the park</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Boarding Services -->
+  <url>
+    <loc>https://www.woofofwalkstreet.com/boarding-services.html</loc>
+    <image:image>
+      <image:loc>https://www.woofofwalkstreet.com/images/boarding/dog-sleeping.jpg</image:loc>
+      <image:caption>Dog peacefully sleeping during weekend boarding</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.woofofwalkstreet.com/images/boarding/cozy-dogs.jpg</image:loc>
+      <image:caption>Dogs resting together in a cozy environment</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
