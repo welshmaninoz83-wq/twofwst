@@ -1,253 +1,186 @@
-/* --------------------
-   Base Styles
--------------------- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ==========================================================================
+   The Woof of Walk Street — Global Styles
+   Mobile-first, accessible, SEO-friendly
+   ========================================================================== */
+
+/* Base / Reset-ish */
+:root{
+  --bg:#ffffff;
+  --ink:#1a1a1a;
+  --muted:#666;
+  --brand:#ff6f00;         /* primary (orange) */
+  --brand-2:#ff8f00;       /* secondary orange */
+  --brand-3:#ffcc80;       /* pale orange */
+  --line:#eee;
+  --card:#ffffff;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --radius:12px;
 }
 
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--brand); text-decoration:none}
+a:hover{opacity:.9}
+h1,h2,h3{line-height:1.2; margin:.2em 0 .4em}
+p{margin:0 0 1rem}
+.muted{color:var(--muted)}
+.center{text-align:center}
+
+/* Layout */
+.container{
+  width:min(1120px, 92vw);
+  margin-inline:auto;
+}
+.section{
+  padding: clamp(2rem, 5vw, 3.5rem) 0;
+}
+.section.alt{background:#fafafa}
+
+/* Header / Nav */
+header{
+  position:sticky; top:0; z-index:50; background:#fff;
+  border-bottom:1px solid var(--line);
+}
+header nav{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; padding:.75rem 0;
+}
+header .logo img{height:56px; width:auto}
+header nav .links{
+  list-style:none; display:flex; gap:1rem; margin:0; padding:0; align-items:center;
+}
+header nav .links a{color:var(--ink); font-weight:600}
+.header-social a{font-size:.9rem; margin-left:.5rem}
+
+/* Simple dropdown for “Book Now” */
+.nav-has-dropdown{position:relative}
+.nav-has-dropdown > a::after{
+  content:"▾"; font-size:.8em; margin-left:.35rem; color:var(--muted)
+}
+.nav-has-dropdown:hover .nav-dropdown{display:block}
+.nav-dropdown{
+  display:none; position:absolute; right:0; top:100%;
+  background:#fff; border:1px solid var(--line); border-radius:10px;
+  box-shadow:var(--shadow); min-width:260px; padding:.35rem; z-index:10;
+}
+.nav-dropdown li{list-style:none}
+.nav-dropdown a{
+  display:block; padding:.55rem .75rem; color:var(--ink); border-radius:8px;
+}
+.nav-dropdown a:hover{background:#fafafa}
+
+/* Buttons */
+.btn{
+  display:inline-block; border:none; border-radius:10px;
+  padding:.85rem 1.15rem; font-weight:700; cursor:pointer;
+  transition:transform .06s ease, filter .15s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--brand); color:#fff}
+.btn-ghost{background:#fff; color:var(--ink); border:1px solid var(--line)}
+.btn-secondary{background:#ffe082; color:#1a1a1a}
+.quick-cta .btn{margin:.35rem}
+
+/* Hero */
+.hero{
+  padding: 4.5rem 0 3rem;
+  background:#0d0d0d; color:#fff;
+}
+.hero .container{display:grid; gap:1.25rem; align-items:center}
+.hero h1{font-size: clamp(2rem, 4.5vw, 3rem); margin:0}
+.hero p.muted{color:#cfcfcf; font-size: clamp(1rem, 2.2vw, 1.125rem)}
+.cta-row{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1rem}
+
+/* FEATURES */
+.feature-grid{
+  display:grid; gap:1rem; grid-template-columns:repeat(3, 1fr);
+}
+.feature{
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); padding:1rem; box-shadow:0 6px 18px rgba(0,0,0,.04);
+}
+.feature h3{margin:.25rem 0 .25rem; font-size:1.05rem}
+.feature p{margin:0; color:#555; font-size:.98rem}
+
+/* PROMO (I.P.O.O.) — Scoped to #promo */
+#promo .promo-inner{
+  background:linear-gradient(135deg, var(--brand), #ff7043);
+  color:#fff; border-radius:16px; padding: clamp(1.25rem, 3vw, 2rem);
+  text-align:center; box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+#promo h2{font-size:clamp(1.6rem, 3.8vw, 2.2rem); margin:0 0 .35rem}
+#promo .promo-lead{font-size:clamp(1.05rem, 2.6vw, 1.25rem); margin:0 0 1rem; opacity:.95}
+#promo .promo-list{list-style:none; padding:0; margin:.5rem 0 1rem; display:grid; gap:.35rem}
+#promo .promo-list li{font-size:clamp(1rem, 2.3vw, 1.125rem); font-weight:600}
+#promo .promo-copy{max-width:60ch; margin:0 auto 1rem; opacity:.95}
+#promo .promo-cta{display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center; margin-top:.6rem}
+
+/* CARDS (blog/service) */
+.grid{display:grid; gap:1rem}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.04);
+  display:flex; flex-direction:column; height:100%;
+}
+.card-img img{width:100%; height:auto; display:block}
+.card-body{padding:1rem}
+.card-body h3{margin:.25rem 0 .5rem}
+.card-body p{margin:0 0 .75rem}
+
+/* TESTIMONIALS — Scoped to #testimonials */
+#testimonials h2{margin-bottom:.5rem}
+.quotes{
+  display:grid; gap:1rem; grid-template-columns:repeat(3,1fr); margin-top:1rem;
+}
+#testimonials .quote{
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+  padding:1rem; box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+#testimonials .quote p{margin:.25rem 0 .5rem; font-size:1.05rem}
+#testimonials .quote footer{color:#666; font-size:.95rem}
+
+/* Brand strip */
+.brand-strip__imgwrap img{
+  width:100%; height:auto; display:block; border-radius:var(--radius);
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-  margin-bottom: 0.5em;
+/* Footer */
+footer{
+  border-top:1px solid var(--line); background:#fff; padding:2rem 0;
+  color:var(--ink)
 }
+footer a{color:var(--ink)}
+footer .social-icons{margin:.25rem 0 .75rem}
 
-p {
-  margin-bottom: 1em;
-}
+/* Utilities */
+.btn-block{display:block; width:100%}
+.hidden{display:none}
 
-a {
-  color: #ff6600;
-  text-decoration: none;
+/* Responsive tweaks */
+@media (max-width: 1024px){
+  .grid-3{grid-template-columns:repeat(2,1fr)}
 }
-a:hover {
-  text-decoration: underline;
+@media (max-width: 900px){
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr 1fr}
 }
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
+@media (max-width: 720px){
+  header nav .links{gap:.6rem; font-size:.95rem}
 }
-
-/* --------------------
-   Header & Navigation
--------------------- */
-header {
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 1em 0;
-}
-header .logo img {
-  height: 56px;
-}
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-nav .links {
-  list-style: none;
-  display: flex;
-  gap: 1.5em;
-}
-nav .links li {
-  position: relative;
-}
-nav .links a {
-  font-weight: 600;
-  color: #333;
-}
-nav .links a[aria-current="page"] {
-  color: #ff6600;
-}
-
-/* Dropdown */
-.nav-has-dropdown:hover .nav-dropdown {
-  display: block;
-}
-.nav-dropdown {
-  display: none;
-  position: absolute;
-  background: #fff;
-  top: 100%;
-  left: 0;
-  border: 1px solid #ddd;
-  padding: 0.5em 1em;
-  z-index: 10;
-}
-.nav-dropdown li {
-  margin: 0.5em 0;
-}
-
-/* Social Icons */
-.header-social, footer .social-icons {
-  display: flex;
-  gap: 0.8em;
-}
-.header-social a,
-footer .social-icons a {
-  font-size: 0.9em;
-  font-weight: 600;
-  color: #555;
-}
-.header-social a:hover,
-footer .social-icons a:hover {
-  color: #ff6600;
-}
-
-/* --------------------
-   Hero Section
--------------------- */
-.hero {
-  background: #fdfdfd;
-  padding: 3em 0;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 2.2rem;
-}
-.hero .muted {
-  color: #666;
-  margin-top: 0.5em;
-}
-.hero .quick-cta {
-  margin-top: 1.5em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: center;
-}
-
-/* --------------------
-   Buttons
--------------------- */
-.btn {
-  display: inline-block;
-  padding: 0.7em 1.5em;
-  border-radius: 4px;
-  font-weight: 600;
-  text-align: center;
-  transition: background 0.3s ease;
-}
-.btn-primary {
-  background: #ff6600;
-  color: #fff;
-}
-.btn-primary:hover {
-  background: #e65c00;
-}
-.btn-ghost {
-  border: 2px solid #ff6600;
-  color: #ff6600;
-  background: transparent;
-}
-.btn-ghost:hover {
-  background: #ff6600;
-  color: #fff;
-}
-
-/* --------------------
-   Sections
--------------------- */
-.section {
-  padding: 3em 0;
-}
-.section.alt {
-  background: #fafafa;
-}
-.grid {
-  display: grid;
-  gap: 2em;
-}
-.grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* Cards */
-.card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 1.5em;
-  border-radius: 6px;
-}
-.card h2 {
-  margin-bottom: 0.5em;
-}
-
-/* Highlight */
-.highlight {
-  background: #fff3e6;
-  border-left: 4px solid #ff6600;
-  padding: 0.75em 1em;
-  margin: 1em 0;
-  font-weight: 600;
-}
-
-/* --------------------
-   Brand Strip
--------------------- */
-.brand-strip__imgwrap img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.brand-strip__cta {
-  text-align: center;
-  padding: 2em 1em;
-}
-.brand-strip__cta h3 {
-  margin-bottom: 1em;
-}
-
-/* --------------------
-   Footer
--------------------- */
-footer {
-  background: #222;
-  color: #ddd;
-  padding: 2em 0;
-  text-align: center;
-}
-footer p {
-  margin: 0.5em 0;
-}
-footer a {
-  color: #ff6600;
-}
-footer a:hover {
-  color: #fff;
-}
-footer .muted {
-  font-size: 0.85em;
-  color: #aaa;
-}
-
-/* --------------------
-   Responsive
--------------------- */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 1em;
-  }
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .quick-cta {
-    flex-direction: column;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 600px){
+  .grid-3,.grid-2,.feature-grid,.quotes{grid-template-columns:1fr}
+  .hero{padding:3rem 0 2rem}
+  .cta-row{gap:.55rem}
 }
