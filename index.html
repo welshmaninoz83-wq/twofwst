@@ -3,24 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Woof of Walk Street | Dog Walking & Boarding South Melbourne</title>
-  <meta name="description" content="Premium one-on-one dog walking and boutique boarding in South Melbourne. 45-minute GPS tracked walks with photo updates. Weekend Woof Club boarding." />
+  <title>Dog Walking & Boarding South Melbourne | The Woof of Walk Street</title>
+  <meta name="description" content="Premium one-on-one dog walking & boutique weekend boarding in South Melbourne. 45-min GPS tracked walks with photo updates. Book today!" />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/" />
-
-  <!-- CSS -->
+  <link rel="icon" href="images/favicon.ico" />
   <link rel="preload" href="css/styles.min.css" as="style" />
   <link rel="stylesheet" href="css/styles.min.css" />
-  <link rel="icon" href="images/favicon.ico" />
-
-  <!-- Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Woof of Walk Street | Dog Walking & Boarding South Melbourne" />
-  <meta property="og:description" content="One-on-one 45-minute walks, GPS tracked with photos. Boutique weekend boarding. South Melbourne." />
+  <meta property="og:title" content="Dog Walking & Boarding South Melbourne | The Woof of Walk Street" />
+  <meta property="og:description" content="Premium one-on-one dog walking & boutique weekend boarding in South Melbourne. 45-min GPS tracked walks with photo updates." />
   <meta property="og:url" content="https://www.woofofwalkstreet.com/" />
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/hero/dog-walking-south-melbourne-1600.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#ff6600" />
+
+  <!-- JSON-LD LocalBusiness + Offers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.woofofwalkstreet.com/#business",
+    "name": "The Woof of Walk Street",
+    "url": "https://www.woofofwalkstreet.com/",
+    "image": "https://www.woofofwalkstreet.com/images/logo-main-512.png",
+    "telephone": "+61-456-754-050",
+    "priceRange": "$$",
+    "description": "Premium one-on-one dog walking and boutique weekend boarding in South Melbourne. 45-minute GPS-tracked walks with photo updates. Weekdays 7am–7pm.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "South Melbourne",
+      "addressLocality": "Melbourne",
+      "addressRegion": "VIC",
+      "postalCode": "3205",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -37.832,
+      "longitude": 144.958
+    },
+    "areaServed": [
+      {"@type":"City","name":"South Melbourne"},
+      {"@type":"City","name":"Port Melbourne"},
+      {"@type":"City","name":"Albert Park"}
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "19:00"
+    }],
+    "sameAs": [
+      "https://www.facebook.com/woofofwalkstreet",
+      "https://www.instagram.com/thewoofofwalkstreet1",
+      "https://x.com/woofofwalkst"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Dog Care Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://www.woofofwalkstreet.com/#walking",
+            "name": "One-on-One Dog Walking (45 minutes)",
+            "description": "Strictly one dog at a time. 45-minute GPS-tracked walk with photo updates. Weekdays 7am–7pm; booked via calendar; subject to availability.",
+            "serviceType": "Dog walking"
+          },
+          "priceCurrency": "AUD",
+          "price": "80"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://www.woofofwalkstreet.com/#boarding",
+            "name": "Weekend Woof Club (Boutique Boarding)",
+            "description": "Home-style weekend boarding with a daily 45-minute walk and updates. One guest only. Trial visit by video; quality kibble and cooked chicken available.",
+            "serviceType": "Dog boarding"
+          },
+          "priceCurrency": "AUD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://www.woofofwalkstreet.com/#memberships",
+            "name": "Walking Memberships (Weekdays Only)",
+            "description": "Prepaid monthly packages; book via calendar; subject to availability. One dog per membership.",
+            "serviceType": "Dog walking membership"
+          },
+          "priceCurrency": "AUD",
+          "priceSpecification": [
+            {"@type":"UnitPriceSpecification","name":"4 walks / month","price":"295","priceCurrency":"AUD"},
+            {"@type":"UnitPriceSpecification","name":"10 walks / month","price":"720","priceCurrency":"AUD"},
+            {"@type":"UnitPriceSpecification","name":"Unlimited (weekdays, max 1/day)","price":"1500","priceCurrency":"AUD"}
+          ]
+        }
+      ]
+    }
+  }
+  </script>
 </head>
+
 <body>
 <header>
   <div class="container">
@@ -42,12 +128,10 @@
           </ul>
         </li>
       </ul>
-
-      <!-- Header Social Icons -->
       <div class="social-icons header-social">
-        <a href="https://www.facebook.com/woofofwalkstreet" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
-        <a href="https://www.instagram.com/thewoofofwalkstreet1" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        <a href="https://x.com/woofofwalkst" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+        <a href="https://www.facebook.com/woofofwalkstreet" target="_blank" rel="noopener">FB</a>
+        <a href="https://www.instagram.com/thewoofofwalkstreet1" target="_blank" rel="noopener">IG</a>
+        <a href="https://x.com/woofofwalkst" target="_blank" rel="noopener">X</a>
       </div>
     </nav>
   </div>
