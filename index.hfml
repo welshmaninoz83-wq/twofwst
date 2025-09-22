@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Woof of Walk Street | Premium Dog Walking & Boarding in South Melbourne</title>
+  <meta name="description" content="One dog only, 45-minute walks with GPS tracking and photo updates. Premium boarding at The Woof of Walk Street in South Melbourne. Book now online.">
+  <link rel="stylesheet" href="css/styles.min.css" />
+  <link rel="icon" href="images/logo/favicon.ico" />
+  <link rel="alternate" type="application/rss+xml" title="Woof Street Journal Feed" href="/blog/feed.xml" />
+</head>
+<body id="top">
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo"><img src="images/logo/logo-main.webp" alt="The Woof of Walk Street logo" /></a>
+      <div class="links">
+        <a href="index.html" aria-current="page"><strong>Home</strong></a>
+        <a href="services.html">Services</a>
+        <a href="walking-services.html">Walking</a>
+        <a href="boarding-services.html">Boarding</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>The Woof of Walk Street</h1>
+    <p>Premium dog walking & boarding in South Melbourne — <strong>one dog only, 45 minutes every time</strong>.</p>
+    <img src="images/dog-walking-south-melbourne-hero.jpg" alt="Dog walking by the beach in South Melbourne" class="hero-image" />
+  </div>
+</section>
+
+<section class="container grid grid-2">
+  <div class="card">
+    <h2>Walking Services</h2>
+    <p>One-on-one 45-minute walks, GPS tracked with photo updates. No vans. No group walks. Just your dog.</p>
+    <p class="highlight">
+      <strong>$80 · 45-Minute Walks</strong><br />
+      Available <strong>7:00 AM – 7:00 PM, Monday–Friday</strong><br />
+      Must be booked in advance via our
+      <a href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">online calendar</a><br />
+      <em>Subject to availability</em>
+    </p>
+    <p class="highlight">✨ New Customers: <strong>50% off your first walk</strong></p>
+    <a class="btn btn-primary" href="walking-services.html">Learn More</a>
+  </div>
+
+  <div class="card">
+    <h2>Boarding Services</h2>
+    <p>Weekend Woof Club boarding — cozy, safe, family environment. We can supply high-quality kibble & cooked chicken if preferred.</p>
+    <a class="btn btn-primary" href="boarding-services.html">Learn More</a>
+  </div>
+</section>
+
+<section class="banner">
+  <p>
+    ⭐ Memberships — 4 walks $295 · 10 walks $720 · Unlimited $1,500 (weekdays only).<br />
+    Walks available <strong>7:00 AM–7:00 PM, Mon–Fri</strong>. Must be booked via our
+    <a href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">calendar</a>. Subject to availability.<br />
+    ✨ Special Offer: <strong>50% off Unlimited Membership for the first month</strong>
+    (for new customers, or existing customers who haven’t used Unlimited before)
+  </p>
+</section>
+
+<section class="container grid grid-3">
+  <div class="card"><h3>GPS Tracking</h3><p>Every walk is tracked and shared with you for peace of mind.</p></div>
+  <div class="card"><h3>Photo Updates</h3><p>Receive real-time photos after every walk or boarding stay.</p></div>
+  <div class="card"><h3>Local Walks</h3><p>South Melbourne, Albert Park & Port Melbourne — parks, streets & beaches.</p></div>
+</section>
+
+<section class="trust-banner">One Dog Only · 45-Minute Walks · GPS Tracking · Photo Updates · Fully Insured</section>
+
+<section class="container">
+  <h2>Happy Tails</h2>
+  <div class="grid grid-2">
+    <div class="card testimonial"><p>“Our Labrador is obsessed with his Woof of Walk Street walks. We love the GPS tracking and photos!”</p><strong>- Sarah, South Melbourne</strong></div>
+    <div class="card testimonial"><p>“The Weekend Woof Club gave us peace of mind — our dog came home relaxed and happy.”</p><strong>- Daniel, Albert Park</strong></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <hr />
+    <p>© 2025 The Woof of Walk Street · South Melbourne · Mon–Fri only · 
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="terms.html">Terms &amp; Conditions</a> · 
+      <a href="humans.txt">Humans.txt</a> · 
+      <a href="#top">Back to top</a>
+    </p>
+  </div>
+</footer>
+<div class="sticky-cta"><a href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">🐾 Book a Walk</a></div>
+</body>
+</html>
