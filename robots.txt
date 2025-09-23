@@ -1,3 +1,11 @@
-/sitemap.xml
-/robots.txt
-Sitemap: https://www.woofofwalkstreet.com/image-sitemap.xml
+# robots.txt for woofofwalkstreet.com
+User-agent: *
+Allow: /
+
+# Crawling hints
+Sitemap: https://www.woofofwalkstreet.com/sitemap.xml
+
+# (Optional) reduce crawl bloat if you add these later:
+# Disallow: /search/
+# Disallow: /cart/
+# Disallow: /admin/
