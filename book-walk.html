@@ -18,16 +18,169 @@
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/hero/dog-walking-south-melbourne-1600.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- GA4 tag (keep only if not globally included already) -->
+  <!-- Force readable text in case global CSS is light-on-light -->
+  <style>
+    body { color:#111; background:#fff; }
+    .muted { color:#555; }
+    .hero { background:#fafafa; }
+    .hero-cta .btn { margin-right:.5rem; }
+    .benefits { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; }
+    .trust-list { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; }
+    .sticky-cta { position:fixed; left:0; right:0; bottom:0; background:#fff; border-top:1px solid #eee; padding:.75rem; display:none; z-index:999; }
+    .sticky-cta .btn { width:100%; }
+    @media (max-width: 800px) {
+      .benefits, .trust-list { grid-template-columns:1fr; }
+      .sticky-cta { display:block; }
+      body { padding-bottom:72px; }
+    }
+    .badge { display:inline-block; padding:.25rem .5rem; border:1px solid #ddd; border-radius:999px; font-size:.85rem; }
+    details summary { cursor:pointer; padding:.5rem 0; font-weight:600; }
+    details .faq-a { padding:0 0 .75rem 0; color:#555; }
+  </style>
+
+  <!-- GA4 tag (wrapped in try/catch so errors can't break rendering) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-KP5LVKN6X3');
+    function gtag(){ try { dataLayer.push(arguments); } catch(e){} }
+    try {
+      gtag('js', new Date());
+      gtag('config', 'G-KP5LVKN6X3');
+    } catch(e) { /* no-op */ }
   </script>
 
-  <!-- Service & FAQ schema -->
+  <!-- Minimal schema (optional) -->
   <script type="application/ld+json">
-  {
-    "@context"
+  {"@context":"https://schema.org","@type":"Service","serviceType":"One-on-One Dog Walking (45 minutes)","provider":{"@type":"Organization","name":"The Woof of Walk Street"},"areaServed":["South Melbourne","Albert Park","Port Melbourne"]}
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="index.html">
+        <img src="images/logo/logo-main-192.png" alt="Woof of Walk Street logo" height="56" />
+      </a>
+      <ul class="links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="walking-services.html">Walking</a></li>
+        <li><a href="boarding-services.html">Boarding</a></li>
+        <li><a href="memberships.html">Memberships</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <h1>Book a One-on-One Dog Walk</h1>
+      <p class="muted">Premium solo <strong>45-minute walks</strong> with GPS tracking & photo updates. South Melbourne, Albert Park & Port Melbourne.</p>
+      <p><span class="badge">First walk 50% off</span> <span class="badge">No pack walking</span> <span class="badge">Weekdays 7am–7pm</span></p>
+      <div class="hero-cta">
+        <a id="cta-book" class="btn btn-primary"
+           href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+           target="_blank" rel="noopener">Book Now</a>
+        <a id="cta-call" class="btn btn-ghost" href="tel:+61456754050">Call 0456 754 050</a>
+        <a id="cta-sms" class="btn btn-ghost" href="sms:+61456754050">Text Us</a>
+      </div>
+      <p class="muted" style="margin-top:.5rem">Takes about 60 seconds via our Time To Pet portal.</p>
+    </div>
+    <div>
+      <picture>
+        <source type="image/webp" srcset="images/hero/dog-walking-south-melbourne-800.webp" media="(max-width: 800px)">
+        <img src="images/hero/dog-walking-south-melbourne-1600.jpg" alt="Solo dog walking in South Melbourne with GPS tracking" />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Why choose us</h2>
+    <div class="benefits">
+      <div class="feature"><h3>One Dog at a Time</h3><p>No pack walking. Your dog gets our full attention, every step.</p></div>
+      <div class="feature"><h3>45 Minutes on Foot</h3><p>The entire session is walking — not shuttling in a car.</p></div>
+      <div class="feature"><h3>GPS & Photos</h3><p>Transparent routes and happy faces after every walk.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2>Loved by local owners</h2>
+    <div class="trust-list">
+      <blockquote class="quote"><p>“My Cavoodle comes home happy every time. Five stars.”</p><footer>— Sarah, South Melbourne</footer></blockquote>
+      <blockquote class="quote"><p>“One-on-one attention made all the difference for our anxious boy.”</p><footer>— Daniel, Port Melbourne</footer></blockquote>
+      <blockquote class="quote"><p>“GPS & photos after each walk gave us total peace of mind.”</p><footer>— Priya, Albert Park</footer></blockquote>
+    </div>
+    <p style="margin-top:1rem">
+      <a class="btn btn-ghost" href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" target="_blank" rel="noopener">Read Google Reviews</a>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Simple pricing</h2>
+    <ul>
+      <li><strong>$50</strong> — casual 45-minute solo walk</li>
+      <li><strong>$300</strong> — 4-walk membership</li>
+      <li><strong>$550</strong> — 10-walk membership</li>
+    </ul>
+    <p class="muted">Weekdays only. Subject to availability. See <a href="faq.html">FAQ</a>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>FAQs</h2>
+    <details><summary>How quickly can I book my first walk?</summary><div class="faq-a">Create your account, add your pet profile, then pick a slot. Most first walks can be scheduled within a few days.</div></details>
+    <details><summary>Can you handle anxious or reactive dogs?</summary><div class="faq-a">Yes — one-on-one walking is ideal. Tell us their triggers and we’ll plan calm routes and enrichment.</div></details>
+    <details><summary>What areas do you cover?</summary><div class="faq-a">South Melbourne, Albert Park and Port Melbourne.</div></details>
+  </div>
+</section>
+
+<div class="sticky-cta">
+  <a id="cta-book-sticky" class="btn btn-primary"
+     href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+     target="_blank" rel="noopener">Book a Walk</a>
+</div>
+
+<footer>
+  <div class="container">
+    <p><strong>The Woof of Walk Street</strong> — South Melbourne</p>
+    <p><a href="tel:+61456754050">0456 754 050</a> · <a href="mailto:info@walkstreet.com">info@walkstreet.com</a></p>
+    <p class="muted">© <span id="y"></span> The Woof of Walk Street</p>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // UTM carry-over
+  const utm = new URLSearchParams(location.search);
+  const ttpBase = "https://www.timetopet.com/portal/woofofwalkstreet/create-account";
+  function withUTM(url){
+    const u = new URL(url);
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'].forEach(k=>{
+      if (utm.get(k)) u.searchParams.set(k, utm.get(k));
+    });
+    return u.toString();
+  }
+  const bookLinks = [document.getElementById('cta-book'), document.getElementById('cta-book-sticky')].filter(Boolean);
+  bookLinks.forEach(a => { a.href = withUTM(ttpBase); });
+
+  // Safe GA event helpers
+  function track(name, params){ try { gtag('event', name, params||{}); } catch(e){} }
+  bookLinks.forEach(a => a.addEventListener('click', () => track('book_click', {link_location: a.id.includes('sticky') ? 'sticky_bar' : 'hero'})));
+  const call=document.getElementById('cta-call'), sms=document.getElementById('cta-sms');
+  if (call) call.addEventListener('click', ()=>track('call_click'));
+  if (sms)  sms.addEventListener('click', ()=>track('sms_click'));
+</script>
+</body>
+</html>
