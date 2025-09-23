@@ -15,6 +15,65 @@
 <meta property="og:url" content="https://www.woofofwalkstreet.com/faq.html" />
 <meta property="og:image" content="https://www.woofofwalkstreet.com/images/hero/melbourne-skyline-1600.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
+
+<!-- Google Analytics 4 tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KP5LVKN6X3');
+</script>
+
+<!-- FAQPage JSON-LD structured data -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+   {
+     "@type": "Question",
+     "name": "How long is a walk?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Walks are 45 minutes on foot. We don’t shuttle in cars — the whole time is walking."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "What are the membership options?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "We offer 4 walks for $300, 10 walks for $550, and Unlimited for $1,500. All are 45-minute solo walks on weekdays."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Do you do pack walks?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. We specialise in one-on-one walks for safety and focus."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "Do I get updates?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. You receive a GPS route and photos after each walk."
+     }
+   },
+   {
+     "@type": "Question",
+     "name": "What’s included in boarding?",
+     "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Boutique boarding includes a calm home environment, daily 45-minute solo walks, and photo updates."
+     }
+   }
+ ]
+}
+</script>
 </head>
 <body>
 <header>
@@ -75,7 +134,7 @@
 <section class="brand-strip">
   <div class="container">
     <div class="brand-strip__imgwrap">
-      <img src="images/hero/melbourne-skyline-1600.jpg" alt="" loading="lazy" />
+      <img src="images/hero/melbourne-skyline-1600.jpg" alt="Melbourne skyline at sunset" loading="lazy" />
     </div>
   </div>
 </section>
@@ -88,8 +147,12 @@
       <a href="https://www.facebook.com/woofofwalkstreet" target="_blank" rel="noopener">Facebook</a> ·
       <a href="https://www.instagram.com/thewoofofwalkstreet1" target="_blank" rel="noopener">Instagram</a> ·
       <a href="https://x.com/woofofwalkst" target="_blank" rel="noopener">X</a> ·
-      <a href="https://share.google/dqB4DFK00sC9OZyEe" target="_blank" rel="noopener">Google Reviews</a>
+      <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" target="_blank" rel="noopener">Google Reviews</a>
     </div>
+    <nav class="footer-nav">
+      <a href="privacy.html">Privacy</a> · 
+      <a href="terms.html">Terms</a>
+    </nav>
     <p class="muted">© <span id="y"></span> The Woof of Walk Street</p>
   </div>
 </footer>
